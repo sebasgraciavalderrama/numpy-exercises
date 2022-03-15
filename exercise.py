@@ -1,47 +1,39 @@
 import numpy as np
 
-my_list = [1,2,3]
-arr = np.array(my_list)
-print(arr)
+arr_of_zeros = np.zeros(10)
+print(arr_of_zeros)
+arr_of_ones = np.ones(10)
+print(arr_of_ones)
+arr_of_fives = np.ones(10) * 5
+print(arr_of_fives)
+arr_ten_to_fifty = np.arange(10, 51)
+print(arr_ten_to_fifty)
+arr_even_ten_to_fifty = np.arange(10, 51, 2)
+print(arr_even_ten_to_fifty)
+three_times_three_mat = np.arange(9).reshape(3, 3)
+print(three_times_three_mat)
+identity_mat = np.identity(3)
+print(identity_mat)
+identity_mat_alternative = np.eye(3)
+print(identity_mat_alternative)
+random_number_zero_to_one = np.random.rand(1)
+print(random_number_zero_to_one)
+random_distribution = np.random.randn(25)
+print(random_distribution)
+new_mat = np.arange(1, 101).reshape(10,10)/100
+print(new_mat)
+twenty_linearly_spaced = np.linspace(0, 1, 20)
+print(twenty_linearly_spaced)
 
-my_mat = [[1,2,3], [4,5,6], [7,8,9]]
-
-print(np.array(my_mat))
-
-print(np.arange(0,11,2))
-
-print(np.zeros(3))
-print(np.zeros((2,3)))
-
-print(np.ones(1))
-print(np.ones((3, 4)))
-
-print(np.linspace(0, 5, 10))
-print(np.linspace(0, 5, 100))
-
-print(np.eye(4))
-
-print(np.random.rand(5, 5))
-
-print(np.random.randn(4,4))
-
-print(np.random.randint(1, 100, 10))
-
-arr = np.arange(25)
-print(arr)
-ranarr = np.random.randint(0, 50, 10)
-print(ranarr)
-arr.reshape(5, 5)
-print(arr)
-
-print(ranarr.max())
-print(ranarr.min())
-print(ranarr.argmax())
-print(ranarr.argmin())
-print(ranarr.shape)
-arr = arr.reshape(5, 5)
-print(arr.shape)
-print(arr.dtype)
-
-from numpy.random import randint
-print(randint(2,10))
+mat = np.arange(1, 26).reshape(5, 5)
+print(mat[2:, 1:])
+print(mat[3, 4])
+print(mat[0:3, 1:2])
+print(mat[4])
+print(mat[3:])
+print(np.sum(mat))
+print(mat.sum())
+print(np.std(mat))
+print(mat.std())
+print(sum(mat))
+print(mat.sum(axis=0))
